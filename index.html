@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Asistencia</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #ffffff;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    body { font-family: sans-serif; text-align: center; padding: 40px 20px; background: #f9fafb; }
+    .btn { display: inline-block; padding: 15px 25px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; }
   </style>
 </head>
 <body>
-  <!-- REEMPLAZA EL TEXTO DE ABAJO CON TU ENLACE QUE TERMINA EN /exec -->
-  <iframe src="https://script.google.com/macros/s/AKfycbwO8d-JmiLTmU5ohB3STigV9FSDJtMIeCQ2sUt53OW4-r15N0g1B_QzJtO9KqNdsERiHw/exec"></iframe>
+  <h2>Cargando Sistema de Asistencia...</h2>
+  <p>Si la página no carga en 3 segundos, presiona el botón:</p>
+  <a id="link" class="btn" href="#">Ingresar al Sistema</a>
+
+  <script>
+    // TU URL REAL FINALIZADA EN /exec
+    var urlBase = "https://script.google.com/macros/s/AKfycbwO8d-JmiLTmU5ohB3STigV9FSDJtMIeCQ2sUt53OW4-r15N0g1B_QzJtO9KqNdsERiHw/exec";
+    
+    // Forzar apertura directa limpiando sesión
+    var urlFinal = urlBase + "?authuser=0";
+    
+    document.getElementById("link").href = urlFinal;
+    
+    // Redirección inmediata
+    window.location.href = urlFinal;
+  </script>
 </body>
 </html>
